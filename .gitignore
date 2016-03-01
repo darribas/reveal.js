@@ -9,9 +9,5 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
-<<<<<<< HEAD
-css/theme/*.map
-=======
 css/reveal.min.css
 js/reveal.min.js
->>>>>>> c93fbf1ddcb0db76d34e558cab2e35cb8823702d
