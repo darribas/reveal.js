@@ -8,27 +8,60 @@
 @import "../template/settings";
 // ---------------------------------------------
 
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
 
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+  src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$mainFont: et-book, 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
 $mainColor: #474747;
-$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
-$headingColor: #222;
+$mainFontSize: 45px;
+$headingFont: et-book, 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$headingColor: #383838;
 $headingMargin: 0 0 $blockMargin 0;
 $headingTextShadow: none;
 $headingTextTransform: none;
-$backgroundColor: #F0F1EB;
-$linkColor: #51483D;
+$backgroundColor: #ffffff;
+$linkColor: #000000;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #26351C;
 
-$heading1Size: 50px;
-$heading2Size: 1.11em;
+$heading1Size: 80px;
+$heading2Size: 2.11em;
 
-.page-title {
-    font-size: 10px;
-}
+body { width: 87.5%;
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 1400px;
+       counter-reset: sidenote-counter; }
 
 .reveal a {
   line-height: 1.3em;
@@ -37,14 +70,6 @@ $heading2Size: 1.11em;
 .reveal p, ul, li, ol, table, pre, dl {
   line-height: 1.5em; 
   text-align: left; }
-
-.white {
-    color: #FFFFFF;
-}
-
-.purple {
-    color: #984ea3;
-}
 
 // Theme template ------------------------------
 @import "../template/theme";
