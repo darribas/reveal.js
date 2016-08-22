@@ -1,0 +1,53 @@
+/**
+ * A simple theme for reveal.js presentations, similar to serif
+ * matching GDS'16 style
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=PT+Serif);
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'PT Serif', serif;
+$mainLineHeight: 1.846em;  
+$mainColor: #666666;
+$mainFontSize: 45px;
+$headingFont: 'PT Serif', serif;
+$headingColor: #444444;
+$headingMargin: 0 0 $blockMargin 0;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #ffffff;
+$linkColor: #66CDAA;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #26351C;
+
+$heading1Size: 80px;
+$heading2Size: 2.11em;
+
+body { width: 87.5%;
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 1400px;
+       counter-reset: sidenote-counter;
+}
+
+code {
+  color: #66CDAA;
+  background-color: #f2f9f8;
+}
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+.reveal p, ul, li, ol, table, pre, dl {
+  line-height: 1.5em; 
+  text-align: left; }
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
