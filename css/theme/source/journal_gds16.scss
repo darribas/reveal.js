@@ -26,7 +26,7 @@ $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #26351C;
 
 $heading1Size: 80px;
-$heading2Size: 2.11em;
+$heading2Size: 1.80em;
 
 body { width: 87.5%;
        margin-left: auto;
@@ -44,9 +44,13 @@ code {
   line-height: 1.3em;
 }
 
-.reveal p, ul, li, ol, table, pre, dl {
+.reveal p, ul, li, ol, pre, dl {
   line-height: 1.5em; 
   text-align: left; }
+
+.reveal div, table {
+  line-height: 1.5em; 
+  text-align: center; }
 
 // Theme template ------------------------------
 @import "../template/theme";
